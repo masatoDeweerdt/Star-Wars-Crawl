@@ -1,20 +1,40 @@
 body {
-    background-color: black;
-    text-align: center;
-    /* background-size: cover; to add after background image*/
+    width: 100%;
+    height: 100%;
     overflow: hidden;
+    background: black;
+    text-align: center;
     perspective: 50px;
+    overflow: hidden;
 }
 
-article h1 {
-    font-size: 50px;
-    font-weight: bold;
+h1 {
+    font-size: 200px;
+    font-weight: 800;
     color: yellow;
-    margin: 100px;
+    margin: 0px;
 }
 
-article p {
-    color: yellow;
+p {
+    color: rgb(35, 153, 118);
     text-align: justify;
+}
+
+.container {
+    position: relative;
+    top: 1200px;
+    transform-origin: 50%, 100%;
+    margin: 0px;
+    animation: crawl 50s infinite;
+}
+
+@keyframes crawl {
+    0% {
+        top: 0%;
+        transform: scale(1.8) rotateX(22deg) translateZ(0px);
+    }
+    100% {
     
+    transform: scale(1.8) rotateX(22deg) translateZ(-1200px)
+    }
 }
